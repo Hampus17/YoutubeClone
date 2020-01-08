@@ -1,12 +1,29 @@
 import React from 'react';
 
-import 'App.css';
+import { SearchBar, VideoDetails } from './components';
+
+import './App.css';
 import youtube from './api/youtube';
 
 class App extends React.Component {
+
+    handleSubmit = async (searchTerm) => {
+
+    }
+
     render () {
         return (
-            <h1>Hello World!</h1>
+            <div id="container">
+                <header id="searchBar">
+                    <SearchBar onFormSubmit={this.handleSubmit} />
+                </header>
+                <div id="mainContent">
+
+                </div>
+                <div id="videoList">
+                    <VideoDetails />
+                </div>
+            </div>
         );
     }
 }
